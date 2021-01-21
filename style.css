@@ -1,20 +1,16 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+/* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+
 * {
   box-sizing: border-box;
 }
 
-/* debug
-* {
-  background: black !important;
-  color: #26C6DA !important;
-  outline: solid #F44336 1px !important;
-} */
 a {
   text-decoration: none;
 }
-
+ /* same style can be applied to elements separated by commas */
 h1,
 h2,
 h3,
@@ -37,6 +33,9 @@ body {
   flex-wrap: wrap;
   font-family: "Open Sans", sans-serif;
 }
+
+
+/* Selects all <header> elements where the parent is a <body> element :- */
 body > header {
   padding: 10% 0;
   width: 100vw;
@@ -47,6 +46,8 @@ body > header {
   align-items: center;
   text-align: center;
 }
+
+/* Selects all <h1> elements inside <header> elements:- */
 body > header h1 {
   font-size: 2rem;
   margin: 0;
@@ -132,32 +133,35 @@ body > aside {
   padding: 2rem 4rem;
   background: #eceff1;
 }
-body > aside section {
+body > aside .sidebar {
   margin-bottom: 2rem;
 }
-body > aside section h2 {
+body > aside .sidebar h2 {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.75);
   margin-bottom: 0.75rem;
 }
-body > aside section ul {
+body > aside .sidebar ul {
   padding-left: 0;
   list-style: none;
 }
-body > aside section ul li {
+body > aside .sidebar ul li {
   margin-bottom: 0.75rem;
 }
-body > aside section ul li a {
+body > aside .sidebar ul li a {
   letter-spacing: 0.5px;
   color: rgba(0, 0, 0, 0.5);
 }
-body > footer {
+body > .footer {
   width: 100%;
   text-align: center;
   padding: 3rem;
   background: #78909c;
   color: white;
 }
+
+/* *************************** to make the page responsive ****************************** */
+
 @media only screen and (max-width: 768px) {
   body main,
 body aside {
@@ -168,10 +172,71 @@ body aside {
     display: flex;
     flex-wrap: wrap;
   }
-  body aside section {
+  body .sidebar {
     width: 50%;
   }
-  body aside section:nth-of-type(2n) {
+  body aside .sidebar:nth-of-type(2n) {
     text-align: right;
   }
+}
+
+/* *************************** additional css for form****************************** */
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Nunito;
+  font-size: 1.2rem;
+}
+
+label,
+input {
+  /* In order to define widths */
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+
+label {
+  width: 30%;
+  /* Positions the label text beside the input */
+  text-align: right;
+}
+
+label+input {
+  width: 30%;
+  /* Large margin-right to force the next element to the new-line
+           and margin-left to create a gutter between the label and input */
+  margin: 0 30% 0 4%;
+}
+
+/* setting a default width of the text area */
+textarea {       
+  width: 300px;
+  height: 150px;
+}
+
+
+
+/* Only the submit button is matched by this selector,
+       but to be sure you could use an id or class for that button */
+
+input+input {
+  float: right;
+}
+
+
+form button {
+  background-color: #1e555f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin:auto;
+  display:block;
+  cursor: pointer;
+
 }
