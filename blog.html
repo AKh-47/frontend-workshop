@@ -34,7 +34,7 @@
             <li><a href="#">Categories</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="new-blog.html">Add new blog</a></li>
+            <li><a href="#new-blog">Add new blog</a></li>
         </ul>
     </nav>
     <main>
@@ -69,7 +69,28 @@
                 <p>The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the United Kingdom and Canada.</p>
                 <a href="#">Read More</a>
         </article>
-   
+        <article>
+<header>
+    <h2 id="new-blog">Add a new blog</h2>
+</header>
+            <form class="form-add" role="form">
+                <section class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Enter Your Blog Title">
+                  <label for="title">Author</label>
+                  <input type="text" name="author" class="form-control" id='author' placeholder="Your name?">
+                  <label for="title">Date</label>
+                  <input type="text" name="date" class="form-control" id="date" placeholder="Published on?">
+                  
+                  <label for="content">Content</label>
+                  <textarea name="content" class="form-control" rows="20"></textarea>
+                </section>
+            
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Publish</button>
+             
+            </form>        
+            
+        </article>
     </main>
    
     <aside>
