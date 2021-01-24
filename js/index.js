@@ -57,11 +57,15 @@ const person = {
     city: "Boston",
     state: "MA",
   },
+  printName: function () {
+    console.log(firstName);
+  },
 };
 
 console.log(person.name);
 console.log(person.hobbies[1]);
 console.log(person.address.city);
+console.log(person.printName());
 
 person.email = "jdoe@gmail.com";
 
@@ -84,6 +88,8 @@ const todos = [
 ];
 
 console.log(todos[1].text);
+
+// break and continue
 
 // LOOPS
 for (let i = 0; i <= 10; i++) {
@@ -146,6 +152,8 @@ function greet(greeting = "Hello", name) {
   }
 }
 
+// return statement
+
 // ARROW FUNCTIONS
 const greet = (greeting = "Hello", name = "There") => `${greeting} ${name}`;
 console.log(greet("Hi"));
@@ -167,3 +175,5 @@ class Person {
 
 const person1 = new Person("John", "Doe", "7-8-80");
 console.log(person1.getFullName());
+
+// EXPLAIN GLOBAL OBJECTS
